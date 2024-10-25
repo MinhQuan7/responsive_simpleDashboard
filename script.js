@@ -18,6 +18,7 @@ function updateClock() {
       updateClock();
       setInterval(updateClock, 1000);
       
+      
 //____________E-Ra_______________________
   const eraWidget = new EraWidget();
 
