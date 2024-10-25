@@ -379,6 +379,46 @@ body {
     font-size: 1rem;
     padding: 0.6rem;
   }
+  .energy-diagram {
+    width: 90%; /* Giảm chiều rộng để tránh tràn */
+    min-height: 250px; /* Giảm chiều cao tối thiểu */
+    margin: 1rem auto; /* Căn giữa theo chiều ngang */
+    padding: 1rem; /* Giảm padding nếu cần */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: flex-start; /* Căn chỉnh từ trên xuống */
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng nếu không đủ chỗ */
+    justify-content: center; /* Căn giữa các phần tử con */
+  }
+
+  .solar-section,
+  .battery-section,
+  .status,
+  .inverter-section,
+  .grid-section,
+  .consumption-section {
+    flex: 1 1 45%; /* Chiếm 45% chiều rộng, có thể điều chỉnh theo nhu cầu */
+    margin: 0.5rem; /* Khoảng cách giữa các phần tử */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung bên trong */
+    text-align: center; /* Căn giữa văn bản */
+  }
+
+  img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của ô */
+    height: auto; /* Giữ tỷ lệ khung hình cho hình ảnh */
+  }
+
+  .value,
+  .label {
+    margin-top: 0.5rem; /* Khoảng cách giữa giá trị và nhãn */
+  }
 }
 
 /* Large mobile phones */
@@ -404,6 +444,46 @@ body {
   .container {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+  }
+  .energy-diagram {
+    width: 90%; /* Giảm chiều rộng để tránh tràn */
+    min-height: 250px; /* Giảm chiều cao tối thiểu */
+    margin: 1rem auto; /* Căn giữa theo chiều ngang */
+    padding: 1rem; /* Giảm padding nếu cần */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: flex-start; /* Căn chỉnh từ trên xuống */
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng nếu không đủ chỗ */
+    justify-content: center; /* Căn giữa các phần tử con */
+  }
+
+  .solar-section,
+  .battery-section,
+  .status,
+  .inverter-section,
+  .grid-section,
+  .consumption-section {
+    flex: 1 1 45%; /* Chiếm 45% chiều rộng, có thể điều chỉnh theo nhu cầu */
+    margin: 0.5rem; /* Khoảng cách giữa các phần tử */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung bên trong */
+    text-align: center; /* Căn giữa văn bản */
+  }
+
+  img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của ô */
+    height: auto; /* Giữ tỷ lệ khung hình cho hình ảnh */
+  }
+
+  .value,
+  .label {
+    margin-top: 0.5rem; /* Khoảng cách giữa giá trị và nhãn */
   }
 }
 
