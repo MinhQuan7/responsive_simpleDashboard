@@ -314,12 +314,13 @@ body {
 @media screen and (max-width: 991px) {
   .energy-diagram {
     width: 90%; /* Giảm chiều rộng để tránh tràn */
-    min-height: 300px; /* Điều chỉnh chiều cao tối thiểu */
+    min-height: 250px; /* Giảm chiều cao tối thiểu */
     margin: 1rem auto; /* Căn giữa theo chiều ngang */
     padding: 1rem; /* Giảm padding nếu cần */
     display: flex;
     flex-direction: column;
     align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: flex-start; /* Căn chỉnh từ trên xuống */
   }
 
   .container {
