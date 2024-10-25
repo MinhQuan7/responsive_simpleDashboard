@@ -1,893 +1,899 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-image: url('img/blue-gradient.jpg');
-    background-size: cover; /* Điều chỉnh kích thước hình ảnh để bao phủ toàn bộ phần tử */
-    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
-    background-position: center; /* Đặt hình ảnh ở giữa */
-    min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-image: url("img/blue-gradient.jpg");
+  background-size: cover; /* Điều chỉnh kích thước hình ảnh để bao phủ toàn bộ phần tử */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  background-position: center; /* Đặt hình ảnh ở giữa */
+  min-height: 100vh;
 }
 
 .header {
-    border-radius: 10px;
-    padding: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: background 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.3s ease;
 }
 
 .company-logo {
-    width: 50px; /* điều chỉnh kích thước logo */
-    height: auto; /* giữ tỷ lệ chiều cao */
-    margin-right: 5px; /* khoảng cách giữa logo và chữ */
-    
+  width: 50px; /* điều chỉnh kích thước logo */
+  height: auto; /* giữ tỷ lệ chiều cao */
+  margin-right: 5px; /* khoảng cách giữa logo và chữ */
 }
 
 .header-box {
-    padding: 0.75rem;
-    text-align: center;
-    color: white;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  border-radius: 8px;
 }
 .energy-block:hover {
-    transform: translateY(-8px); /* Hiệu ứng hover nổi nhẹ */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Đổ bóng mạnh hơn khi hover */
+  transform: translateY(-8px); /* Hiệu ứng hover nổi nhẹ */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Đổ bóng mạnh hơn khi hover */
 }
 .energy-icon {
-    padding-top: 10px;
-    text-align: center;
-    flex: 0;
+  padding-top: 10px;
+  text-align: center;
+  flex: 0;
 }
 .dashboard-container {
-    width: 100%;
-    max-width: 1400px;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    margin: 0 auto;
-    position: relative;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  position: relative;
 }
 .box-style {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
-    padding: 20px;
-    margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .energy-block {
-    width: 100%;
-    min-height: 220px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: 0 8px 16px rgba(54, 52, 50, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  min-height: 220px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 16px rgba(54, 52, 50, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .energy-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
-    position: relative; /* Thêm position relative */
-    z-index: 1; /* Đảm bảo energy-grid nổi lên trên */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  position: relative; /* Thêm position relative */
+  z-index: 1; /* Đảm bảo energy-grid nổi lên trên */
 }
 .energy-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .energy-content h3 {
-    font-size: 18px;
-    color: #ffffff;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 .energy-content p {
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
-    margin-bottom: 0.5rem;
-    color: #ffffff;
-    font-size: 18px;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-size: 18px;
 }
-
 
 /* Hover effects */
 .box-style:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .dashboard-container {
-        grid-template-columns: 1fr;
-    }
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .container {
-    width: 100%;
-    max-width: 800px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .energy-icon img {
-    width: clamp(40px, 5vw, 50px);
-    height: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease-in-out;
+  width: clamp(40px, 5vw, 50px);
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
 }
 .name-company {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.pv-energy { background-color: #000000; }
-.discharge-energy { background-color: #ffffff; }
-.charge-energy  { background-color:#ffffff; } /* Thay màu nền cho năng lượng đẩy lưới */
-.grid-energy { background-color: #ffffff; }
-.consumption-energy { background-color: #ffffff; }  
+.pv-energy {
+  background-color: #000000;
+}
+.discharge-energy {
+  background-color: #ffffff;
+}
+.charge-energy {
+  background-color: #ffffff;
+} /* Thay màu nền cho năng lượng đẩy lưới */
+.grid-energy {
+  background-color: #ffffff;
+}
+.consumption-energy {
+  background-color: #ffffff;
+}
 
 .pv-text {
-    background-color: #00CD66;
+  background-color: #00cd66;
 }
 
 .discharge-text {
-    background-color: #CD9B1D ;
+  background-color: #cd9b1d;
 }
 .charge-header {
-    background-color: #CD69C9;
+  background-color: #cd69c9;
 }
 .grid-header {
-    background-color: #7AC5CD;
+  background-color: #7ac5cd;
 }
 .energy-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột */
-    gap: 20px; /* Khoảng cách giữa các block */
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột */
+  gap: 20px; /* Khoảng cách giữa các block */
+  padding: 20px;
 }
 
 .energy-block {
-    width: 100%;
-    min-height: 220px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: 0 8px 16px rgba(54, 52, 50, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  min-height: 220px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 16px rgba(54, 52, 50, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .energy-icon img {
-    width: 50px; /* Kích thước biểu tượng */
-    height: 50px;
-    opacity: 0.8; /* Độ mờ để hòa hợp với thiết kế tổng thể */
-    transition: opacity 0.3s ease-in-out;
+  width: 50px; /* Kích thước biểu tượng */
+  height: 50px;
+  opacity: 0.8; /* Độ mờ để hòa hợp với thiết kế tổng thể */
+  transition: opacity 0.3s ease-in-out;
 }
 
 .energy-icon img:hover {
-    opacity: 1; /* Làm rõ biểu tượng khi hover */
+  opacity: 1; /* Làm rõ biểu tượng khi hover */
 }
 
 .energy-diagram {
-    width: 100%;
-    min-height: 400px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .additional-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: fit-content;
 }
 
-
 .info-block {
-    background-color: #ffffff;
-    padding: 10px;
-    margin: 5px;
-    width: 300px; /* Fixed width for better alignment */
-    text-align: center;
-    border-radius: 8px;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  width: 300px; /* Fixed width for better alignment */
+  text-align: center;
+  border-radius: 8px;
 }
 
 .info-block span {
-    color: #000;
+  color: #000;
 }
 .span {
-   background-color: #000000;
+  background-color: #000000;
 }
 .quick-charge {
-    background-color:#339966;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 18px;
+  background-color: #339966;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 .quick-charge:hover {
-    background-color: tomato;
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
+  background-color: tomato;
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
 /* Media Queries */
 /* Extra large screens (TV, large desktop) */
 @media screen and (min-width: 1400px) {
-    .dashboard-container {
-        max-width: 1800px;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-        padding: 2.5rem;
-    }
+  .dashboard-container {
+    max-width: 1800px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2.5rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+  .energy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 
-    .energy-block {
-        min-height: 250px;
-    }
+  .energy-block {
+    min-height: 250px;
+  }
 
-    .energy-content h3 {
-        font-size: 1.8rem;
-    }
+  .energy-content h3 {
+    font-size: 1.8rem;
+  }
 
-    .header-box {
-        font-size: 1.3rem;
-    }
+  .header-box {
+    font-size: 1.3rem;
+  }
 }
 
 /* Large desktop screens */
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
-    .dashboard-container {
-        max-width: 1300px;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
-    }
+  .dashboard-container {
+    max-width: 1300px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.8rem;
-    }
+  .energy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
 }
 
 /* Standard desktop screens */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .dashboard-container {
-        max-width: 1100px;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+  .dashboard-container {
+    max-width: 1100px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
+  .energy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 /* Small desktop and tablet landscape */
 /* Media Queries */
 @media screen and (max-width: 991px) {
-    .dashboard-container {
-        grid-template-columns: repeat(1, 1fr); /* Đặt lại thành 1 cột */
-    }
+  .dashboard-container {
+    grid-template-columns: repeat(1, 1fr); /* Đặt lại thành 1 cột */
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(1, 1fr); /* Đặt lại thành 1 cột cho energy-grid */
-    }
+  .energy-grid {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Đặt lại thành 1 cột cho energy-grid */
+  }
+  .energy-diagram {
+    width: 90%; /* Giảm chiều rộng để tránh tràn */
+    min-height: 300px; /* Điều chỉnh chiều cao tối thiểu */
+    margin: 1rem auto; /* Căn giữa theo chiều ngang */
+    padding: 1rem; /* Giảm padding nếu cần */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  }
 
-    .energy-diagram {
-        grid-column: 1; /* Đảm bảo energy-diagram chiếm toàn bộ cột */
-        grid-row: 2; /* Đặt energy-diagram ở hàng thứ hai */
-    }
+  .energy-content {
+    text-align: center; /* Căn giữa văn bản trong energy-content */
+  }
 
-    .additional-info {
-        grid-row: 3; /* Đưa additional-info xuống hàng thứ ba */
-    }
-        .energy-block {
-        min-height: 200px; /* Giảm chiều cao tối thiểu */
-        padding: 1rem; /* Giảm padding nếu cần */
-    }
+  .energy-diagram {
+    grid-column: 1; /* Đảm bảo energy-diagram chiếm toàn bộ cột */
+    grid-row: 2; /* Đặt energy-diagram ở hàng thứ hai */
+  }
 
-    .energy-content {
-        justify-content: center; /* Căn giữa nội dung */
-        text-align: center; /* Căn giữa văn bản */
-    }
+  .additional-info {
+    grid-row: 3; /* Đưa additional-info xuống hàng thứ ba */
+  }
+  .energy-block {
+    min-height: 200px; /* Giảm chiều cao tối thiểu */
+    padding: 1rem; /* Giảm padding nếu cần */
+  }
 
-    .energy-content h3,
-    .energy-content p {
-        text-align: center; /* Đảm bảo tiêu đề và đoạn văn bản được căn giữa */
-    }
-        .energy-diagram {
-        width: 90%; /* Giảm chiều rộng để tránh tràn */
-        min-height: 300px; /* Điều chỉnh chiều cao tối thiểu */
-        margin: 1rem auto; /* Căn giữa theo chiều ngang */
-        padding: 1rem; /* Giảm padding nếu cần */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Căn giữa nội dung theo chiều dọc */
-    }
+  .energy-content {
+    justify-content: center; /* Căn giữa nội dung */
+    text-align: center; /* Căn giữa văn bản */
+  }
 
-    .energy-content {
-        text-align: center; /* Căn giữa văn bản trong energy-content */
-    }
+  .energy-content h3,
+  .energy-content p {
+    text-align: center; /* Đảm bảo tiêu đề và đoạn văn bản được căn giữa */
+  }
 }
 
 /* Tablet portrait */
 @media screen and (min-width: 576px) and (max-width: 767px) {
-    .dashboard-container {
-        grid-template-columns: 1fr;
-        padding: 1.2rem;
-    }
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    padding: 1.2rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
-        padding: 1rem;
-    }
+  .energy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    padding: 1rem;
+  }
 
-    .energy-block {
-        min-height: 200px;
-    }
+  .energy-block {
+    min-height: 200px;
+  }
 
-    .energy-content h3 {
-        font-size: 1.2rem;
-    }
+  .energy-content h3 {
+    font-size: 1.2rem;
+  }
 
-    .header-box {
-        font-size: 1rem;
-        padding: 0.6rem;
-    }
+  .header-box {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
 }
 
 /* Large mobile phones */
 @media screen and (min-width: 480px) and (max-width: 575px) {
-    .dashboard-container {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  .energy-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
-    .energy-block {
-        min-height: 180px;
-    }
+  .energy-block {
+    min-height: 180px;
+  }
 
-    .energy-content h3 {
-        font-size: 1.1rem;
-    }
+  .energy-content h3 {
+    font-size: 1.1rem;
+  }
 
-    .container {
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
-    }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
 }
 
 /* Small mobile phones */
 @media screen and (max-width: 479px) {
-    .dashboard-container {
-        grid-template-columns: 1fr;
-        padding: 0.8rem;
-    }
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    padding: 0.8rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
-        padding: 0.8rem;
-    }
+  .energy-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
 
-    .energy-block {
-        min-height: 160px;
-    }
+  .energy-block {
+    min-height: 160px;
+  }
 
-    .energy-content h3 {
-        font-size: 1rem;
-    }
+  .energy-content h3 {
+    font-size: 1rem;
+  }
 
-    .header-box {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
+  .header-box {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
 
-    .energy-icon img {
-        width: 35px;
-        height: auto;
-    }
+  .energy-icon img {
+    width: 35px;
+    height: auto;
+  }
 }
 
 /* Landscape mode for mobile devices */
 @media screen and (max-height: 500px) and (orientation: landscape) {
-    .dashboard-container {
-        grid-template-columns: 1fr;
-        padding: 0.8rem;
-    }
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    padding: 0.8rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.8rem;
-    }
+  .energy-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+  }
 
-    .energy-block {
-        min-height: 140px;
-    }
+  .energy-block {
+    min-height: 140px;
+  }
 
-    .energy-diagram {
-        min-height: 300px;
-    }
+  .energy-diagram {
+    min-height: 300px;
+  }
 }
 
 /* Support for high-pixel-density displays */
-@media screen and (-webkit-min-device-pixel-ratio: 2), 
-       screen and (min-resolution: 192dpi) {
-    body {
-        background-size: cover;
-    }
-    
-    .energy-icon img {
-        transform: scale(0.9);
-    }
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi) {
+  body {
+    background-size: cover;
+  }
+
+  .energy-icon img {
+    transform: scale(0.9);
+  }
 }
 
 /* Support for ultrawide monitors */
 @media screen and (min-aspect-ratio: 21/9) {
-    .dashboard-container {
-        max-width: 2000px;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-    }
+  .dashboard-container {
+    max-width: 2000px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
 
-    .energy-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
-    }
+  .energy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-    .energy-block {
-        background: rgba(0, 0, 0, 0.2);
-    }
+  .energy-block {
+    background: rgba(0, 0, 0, 0.2);
+  }
 
-    .energy-diagram {
-        background: rgba(0, 0, 0, 0.2);
-    }
+  .energy-diagram {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
 /* Print media query */
 @media print {
-    .dashboard-container {
-        width: 100%;
-        display: block;
-    }
+  .dashboard-container {
+    width: 100%;
+    display: block;
+  }
 
-    .energy-grid {
-        page-break-inside: avoid;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .energy-grid {
+    page-break-inside: avoid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .energy-block {
-        break-inside: avoid;
-        background: none;
-        box-shadow: none;
-        border: 1px solid #ccc;
-    }
+  .energy-block {
+    break-inside: avoid;
+    background: none;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
 }
 @media screen and (max-width: 767px) {
-    .additional-info {
-        width: 100%;
-    }
-    
-    .info-block {
-        width: 100%;
-        max-width: 300px;
-    }
+  .additional-info {
+    width: 100%;
+  }
+
+  .info-block {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 /* Ẩn additional-info ở màn hình nhỏ */
 @media screen and (max-width: 575px) {
-    .additional-info {
-        display: none; /* Ẩn hoàn toàn phần tử */
-    }
-    
-    /* Điều chỉnh layout khi additional-info bị ẩn */
-    .dashboard-container {
-        grid-template-rows: auto; /* Reset grid rows */
-        gap: 1rem;
-    }
-    
-    .energy-grid {
-        margin-bottom: 1rem;
-    }
-    
-    /* Tùy chọn: Thêm một nút để toggle additional-info */
-    .toggle-info {
-        display: block;
-        width: 100%;
-        padding: 0.8rem;
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        border-radius: 8px;
-        color: white;
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        backdrop-filter: blur(10px);
-        cursor: pointer;
-    }
+  .additional-info {
+    display: none; /* Ẩn hoàn toàn phần tử */
+  }
+
+  /* Điều chỉnh layout khi additional-info bị ẩn */
+  .dashboard-container {
+    grid-template-rows: auto; /* Reset grid rows */
+    gap: 1rem;
+  }
+
+  .energy-grid {
+    margin-bottom: 1rem;
+  }
+
+  /* Tùy chọn: Thêm một nút để toggle additional-info */
+  .toggle-info {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+  }
 }
 
 /* Tùy chọn: Style cho trạng thái hiển thị khi toggle */
 .additional-info.show {
-    display: flex;
-    animation: fadeIn 0.3s ease;
+  display: flex;
+  animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Đảm bảo layout tổng thể vẫn đẹp khi ẩn additional-info */
 @media screen and (max-width: 575px) {
-    .energy-diagram {
-        margin-top: 0;
-    }
-    
-    .dashboard-container {
-        padding: 0.8rem;
-    }
-    
-    /* Tối ưu spacing cho các phần tử còn lại */
-    .energy-grid {
-        padding: 0.8rem;
-    }
-    
-    .energy-block {
-        margin-bottom: 0.8rem;
-    }
+  .energy-diagram {
+    margin-top: 0;
+  }
+
+  .dashboard-container {
+    padding: 0.8rem;
+  }
+
+  /* Tối ưu spacing cho các phần tử còn lại */
+  .energy-grid {
+    padding: 0.8rem;
+  }
+
+  .energy-block {
+    margin-bottom: 0.8rem;
+  }
 }
 
 /* Solar Panel Section */
 .solar-section {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 /* Battery Section */
 .battery-section {
-    position: absolute;
-    top: 100px;
-    left: 20px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
 }
 
 .battery-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 /* Inverter Section */
 .inverter-section {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 2;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
 }
 
 .cabinet {
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 120px;
 }
 
 /* Status Section */
 .status-section {
-    position: absolute;
-    top: 260px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 2;
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
 }
 
 /* Grid Section */
 .grid-section {
-    position: absolute;
-    top: 100px;
-    right: 20px;
-    text-align: right;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  text-align: right;
 }
 
 .grid-icon {
-    width: 40px;
-    height: 40px;
-    margin-left: auto;
-    margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 
 /* Consumption Section */
 .consumption-section {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-align: right;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
 }
 
 .consumption-icon {
-    width: 40px;
-    height: 40px;
-    margin-left: auto;
-    margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 
 /* Timestamp Section */
 .timestamp {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #666;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #666;
 }
-
 
 /* Text Styles */
 .value {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
 }
 
 .status {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .status-dot {
-    width: 8px;
-    height: 8px;
-    background: #4CAF50;
-    border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background: #4caf50;
+  border-radius: 50%;
 }
 
 /* Connection Lines */
 .connection-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .line {
-    position: absolute;
-    height: 4px; /* Chiều cao của đường line */
-    background-color: transparent; /* Đặt màu nền thành trong suốt */
+  position: absolute;
+  height: 4px; /* Chiều cao của đường line */
+  background-color: transparent; /* Đặt màu nền thành trong suốt */
 }
 
 .line-vertical {
-    position: absolute; /* Đảm bảo vị trí là tuyệt đối */
-    width: 4px; /* Độ rộng của đường thẳng */
-    height: 100%; /* Chiều cao đầy đủ */
-    top: 40px; /* Vị trí từ trên xuống */
-    left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
+  position: absolute; /* Đảm bảo vị trí là tuyệt đối */
+  width: 4px; /* Độ rộng của đường thẳng */
+  height: 100%; /* Chiều cao đầy đủ */
+  top: 40px; /* Vị trí từ trên xuống */
+  left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
 }
 
 .line-arrow {
-    background-image: linear-gradient(90deg, #ff8521 50%, transparent 50%);
-    background-size: 25px 100%; /* Kích thước của mũi tên */
-    animation: moveArrow 3s linear infinite; /* Thêm animation */
+  background-image: linear-gradient(90deg, #ff8521 50%, transparent 50%);
+  background-size: 25px 100%; /* Kích thước của mũi tên */
+  animation: moveArrow 3s linear infinite; /* Thêm animation */
 }
 
 @keyframes moveArrow {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 0%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 /* Specific line positions */
 .line-left {
-    left: 100px;
-    top: 190px;
-    width: 250px;
+  left: 100px;
+  top: 190px;
+  width: 250px;
 }
 
 .line-right {
-    right: 100px;
-    top: 190px;
-    width: 250px;
+  right: 100px;
+  top: 190px;
+  width: 250px;
 }
 
 .line-status {
-    left: 50%;
-    top: 210px;
-    height: 60px;
-    transform: translateX(-50%);
+  left: 50%;
+  top: 210px;
+  height: 60px;
+  transform: translateX(-50%);
 }
 /* Đường line từ PV tới status-section */
 .line-pv-to-status {
-    top: 50px; /* Điều chỉnh vị trí theo yêu cầu */
-    left: 190px; /* Điều chỉnh vị trí theo yêu cầu */
-    width: 210px; /* Điều chỉnh độ dài theo yêu cầu */
+  top: 50px; /* Điều chỉnh vị trí theo yêu cầu */
+  left: 190px; /* Điều chỉnh vị trí theo yêu cầu */
+  width: 210px; /* Điều chỉnh độ dài theo yêu cầu */
 }
 .line-pv-to-status-vertical {
-    top: 50px; /* Điều chỉnh vị trí theo yêu cầu */
-    left: 400px; /* Điều chỉnh vị trí theo yêu cầu */
-    height: 200px; /* Điều chỉnh độ dài theo yêu cầu */
+  top: 50px; /* Điều chỉnh vị trí theo yêu cầu */
+  left: 400px; /* Điều chỉnh vị trí theo yêu cầu */
+  height: 200px; /* Điều chỉnh độ dài theo yêu cầu */
 }
-
 
 /*Vertical*/
 .line-arrow-vertical {
-    position: absolute; /* Đảm bảo vị trí là tuyệt đối */
-    width: 4px; /* Độ rộng của đường thẳng */
-    height: 55px; /* Chiều cao đầy đủ */
-    background-image: linear-gradient(90deg, #ff8521 50%, transparent 100%);
-    background-size: 25px 100%; /* Kích thước của mũi tên */
-    animation: moveArrow-vertical 3s linear infinite; /* Thêm animation */
-    left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
+  position: absolute; /* Đảm bảo vị trí là tuyệt đối */
+  width: 4px; /* Độ rộng của đường thẳng */
+  height: 55px; /* Chiều cao đầy đủ */
+  background-image: linear-gradient(90deg, #ff8521 50%, transparent 100%);
+  background-size: 25px 100%; /* Kích thước của mũi tên */
+  animation: moveArrow-vertical 3s linear infinite; /* Thêm animation */
+  left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
 }
 
 @keyframes moveArrow-vertical {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 0% 100%; /* Di chuyển từ trên xuống dưới */
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%; /* Di chuyển từ trên xuống dưới */
+  }
 }
 
 /* Tạo hình dạng mũi tên ở đầu đường thẳng */
 .line-arrow-vertical::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 10px;
-    border-left: 5px solid transparent; /* Mũi tên bên trái */
-    border-right: 5px solid transparent; /* Mũi tên bên phải */
-    border-bottom: 10px solid #ff8521; /* Màu sắc của mũi tên */
-    top: -15px; /* Đặt vị trí của mũi tên ở đầu đường line */
-    left: -2px; /* Căn giữa mũi tên với đường line */
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-left: 5px solid transparent; /* Mũi tên bên trái */
+  border-right: 5px solid transparent; /* Mũi tên bên phải */
+  border-bottom: 10px solid #ff8521; /* Màu sắc của mũi tên */
+  top: -15px; /* Đặt vị trí của mũi tên ở đầu đường line */
+  left: -2px; /* Căn giữa mũi tên với đường line */
 }
 
-
 .line-arrow-vertical-top {
-    position: absolute; /* Đảm bảo vị trí là tuyệt đối */
-    width: 4px; /* Độ rộng của đường thẳng */
-    height: 55px; /* Chiều cao đầy đủ */
-    background-image: linear-gradient(90deg, #ff8521 50%, transparent 100%);
-    background-size: 25px 100%; /* Kích thước của mũi tên */
-    animation: moveArrow-vertical 3s linear infinite; /* Thêm animation */
-    left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
+  position: absolute; /* Đảm bảo vị trí là tuyệt đối */
+  width: 4px; /* Độ rộng của đường thẳng */
+  height: 55px; /* Chiều cao đầy đủ */
+  background-image: linear-gradient(90deg, #ff8521 50%, transparent 100%);
+  background-size: 25px 100%; /* Kích thước của mũi tên */
+  animation: moveArrow-vertical 3s linear infinite; /* Thêm animation */
+  left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
 }
 
 @keyframes moveArrow-vertical-top {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 0% 100%; /* Di chuyển từ trên xuống dưới */
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%; /* Di chuyển từ trên xuống dưới */
+  }
 }
 
 /* Tạo hình dạng mũi tên ở đầu đường thẳng */
 .line-arrow-vertical-top::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 10px;
-    border-left: 5px solid transparent; /* Mũi tên bên trái */
-    border-right: 5px solid transparent; /* Mũi tên bên phải */
-    border-bottom: 10px solid #ff8521; /* Màu sắc của mũi tên */
-    top: 55px; /* Đặt vị trí của mũi tên ở đầu đường line */
-    left: -2px; /* Căn giữa mũi tên với đường line */
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-left: 5px solid transparent; /* Mũi tên bên trái */
+  border-right: 5px solid transparent; /* Mũi tên bên phải */
+  border-bottom: 10px solid #ff8521; /* Màu sắc của mũi tên */
+  top: 55px; /* Đặt vị trí của mũi tên ở đầu đường line */
+  left: -2px; /* Căn giữa mũi tên với đường line */
 }
 
 /*________Mũi tên từ trên xuống__________*/
 .line-arrow-vertical-bottom {
-    position: absolute; /* Đảm bảo vị trí là tuyệt đối */
-    width: 4px; /* Độ rộng của đường thẳng */
-    height: 85px; /* Chiều cao đầy đủ */
-    background-image: linear-gradient(90deg, #ff8521 50%, transparent 50%);
-    background-size: 25px 100%; /* Kích thước của mũi tên */
-    animation: moveArrow-vertical 3s linear infinite; /* Thêm animation */
-    left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
+  position: absolute; /* Đảm bảo vị trí là tuyệt đối */
+  width: 4px; /* Độ rộng của đường thẳng */
+  height: 85px; /* Chiều cao đầy đủ */
+  background-image: linear-gradient(90deg, #ff8521 50%, transparent 50%);
+  background-size: 25px 100%; /* Kích thước của mũi tên */
+  animation: moveArrow-vertical 3s linear infinite; /* Thêm animation */
+  left: 50%; /* Vị trí từ trái sang phải (có thể điều chỉnh) */
 }
 
 @keyframes moveArrow-vertical-bottom {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 0%; /* Di chuyển từ trên xuống dưới */
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%; /* Di chuyển từ trên xuống dưới */
+  }
 }
 
 /* Tạo hình dạng mũi tên ở đầu đường thẳng */
 .line-arrow-vertical-bottom::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 10px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid #ff6804;
-    top: 85px;
-    left: -2px;
-    transform: rotate(180deg); /* Xoay mũi tên 90 độ */
-    /* Có thể thêm transform-origin nếu cần điều chỉnh điểm xoay */
-    transform-origin: center center;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #ff6804;
+  top: 85px;
+  left: -2px;
+  transform: rotate(180deg); /* Xoay mũi tên 90 độ */
+  /* Có thể thêm transform-origin nếu cần điều chỉnh điểm xoay */
+  transform-origin: center center;
 }
 
 /*____Clock Realtime______*/
 .clock-container {
-    position: absolute; /* Định vị tương đối với section cha */
-    left: 10px;        /* Cách lề trái 10px */
-    bottom: 10px;      /* Cách lề dưới 10px */
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+  position: absolute; /* Định vị tương đối với section cha */
+  left: 10px; /* Cách lề trái 10px */
+  bottom: 10px; /* Cách lề dưới 10px */
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
 
 .clock {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
 }
