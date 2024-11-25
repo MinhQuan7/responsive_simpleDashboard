@@ -25,6 +25,24 @@ body {
   transition: background 0.3s ease;
 }
 
+.value-unit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.value-unit h3 {
+  display: inline-flex;  /* Thay đổi display thành inline-flex */
+  margin: 0;            /* Loại bỏ margin mặc định của h3 */
+  padding: 0;           /* Loại bỏ padding mặc định của h3 */
+}
+
+/* Tùy chỉnh kích thước cho đơn vị */
+.value-unit .unit {
+  font-size: 1em;      /* Có thể điều chỉnh kích thước chữ của đơn vị */
+  margin-left: 4px;    /* Khoảng cách giữa giá trị và đơn vị */
+}
+
 .company-logo {
   width: 50px; /* điều chỉnh kích thước logo */
   height: auto; /* giữ tỷ lệ chiều cao */
