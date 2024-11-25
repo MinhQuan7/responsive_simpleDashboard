@@ -27,9 +27,8 @@
           <h3>Dòng Điện</h3>
         </div>
         <div class="energy-content">
-          <div class="current">Sản lượng hôm nay <h3 id="currentId">--</h3>
+          <div class="current">Sản lượng hôm nay <h3 id="currentId"> A</h3>
           </div>
-          <h3>A</h3>
         </div>
         <div class="energy-icon">
           <img src="assest/img/power.png" alt="PV Icon" />
@@ -41,10 +40,9 @@
           <h3>Điện Áp</h3>
         </div>
         <div class="energy-content">
-          <p class="voltage">Xả hôm nay
-          <h3 id="voltageId">--</h3>
-          </p>
-          <h3> kWh</h3>
+          <div class="voltage">Xả hôm nay
+            <h3 id="voltageId"> V</h3>
+          </div>
         </div>
         <div class="energy-icon">
           <img src="assest/img/powerloss.png" alt="Discharge Icon" />
@@ -67,11 +65,14 @@
 
       <div class="energy-block grid-energy">
         <div class="header-box grid-header">
-          <h3>Công suất tiêu thụ</h3>
+          <div class="powerConsumption">
+            <h3>Công suất tiêu thụ</h3>
+          </div>
+
         </div>
         <div class="energy-content">
           <p>Tiêu thụ hôm nay</p>
-          <h3>12.6 kWh</h3>
+          <h3 id="pw"> kWh</h3>
         </div>
         <div class="energy-icon">
           <img src="assest/img/onoff.png" alt="" />
