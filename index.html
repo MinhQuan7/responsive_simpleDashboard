@@ -67,7 +67,7 @@
           <p>Đẩy lưới hôm nay</p>
           <div class="value-unit">
             <h3 id="instanPower">0</h3>
-            <h3 class="unit">kWh</h3>
+            <h3 class="unit">kW</h3>
           </div>
         </div>
         <div class="energy-icon">
@@ -192,6 +192,7 @@
     const voltage = document.getElementById("voltageId"); // ID chuỗi cho điện áp
     const pw = document.getElementById("instanPower"); // ID số cho công suất tiêu thụ
     const powerConsumption = document.getElementById("Power");
+
     let configCurrent = null,
       configVol = null,
       configPower = null,
@@ -213,7 +214,7 @@
         const voltageVal = values[configVol.id].value;
         const currentVal = values[configCurrent.id].value;
         const powerVal = values[configPower.id].value;
-        const powerConsumpVal = values[configPower.id].value;
+        const powerConsumpVal = values[configPowerConsumption.id].value;
 
         current.innerHTML = currentVal;
         voltage.innerHTML = voltageVal
