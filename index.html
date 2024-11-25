@@ -27,8 +27,12 @@
           <h3>Dòng Điện</h3>
         </div>
         <div class="energy-content">
-          <div class="current">Sản lượng hôm nay <h3 id="currentId"></h3>
-            <h3 class="unit"> A</h3>
+          <div class="current">
+            Sản lượng hôm nay
+            <div class="value-unit">
+              <h3 id="currentId"></h3>
+              <h3 class="unit">A</h3>
+            </div>
           </div>
         </div>
         <div class="energy-icon">
@@ -62,7 +66,8 @@
         <div class="energy-content">
           <p>Đẩy lưới hôm nay</p>
           <div class="value-unit">
-            <h3 class="power">0 kWh</h3>
+            <h3 class="power">0</h3>
+            <h3 class="unit">kWh</h3>
           </div>
         </div>
         <div class="energy-icon">
@@ -75,7 +80,6 @@
           <div class="powerConsumption">
             <h3>Công suất tiêu thụ</h3>
           </div>
-
         </div>
         <div class="energy-content">
           <p>Tiêu thụ hôm nay</p>
@@ -83,103 +87,107 @@
             <h3 id="Power"></h3>
             <h3 class="unit">kWh</h3>
           </div>
-
         </div>
         <div class="energy-icon">
           <img src="assest/img/onoff.png" alt="" />
         </div>
       </div>
     </div>
+    <div class="energy-icon">
+      <img src="assest/img/onoff.png" alt="" />
+    </div>
+  </div>
+  </div>
 
 
-    <!-- Sơ đồ năng lượng -->
-    <section class="energy-diagram">
-      <!-- Icons và hình ảnh sẽ được chèn tại đây -->
-      <div class="container">
-        <!-- Solar Panel -->
-        <div class="solar-section">
-          <img src="assest/img/stationTrans.png" alt="stationTrans" />
-          <div>
-            <div class="value">7202W</div>
-            <div class="label">Công suất PV</div>
-          </div>
-        </div>
-
-        <!-- Battery -->
-        <div class="battery-section">
-          <img src="assest/img/weatherStation.png" alt="weatherStation" />
-          <div class="value">5733W</div>
-          <div class="label">Công suất sạc</div>
-          <div class="value">55.2Vdc</div>
-          <div class="label">87% Dung lượng ắc quy</div>
-        </div>
-
-        <!-- Status -->
-        <div class="status">
-          <div class="status-dot"></div>
-          <span>Normal</span>
-        </div>
-
-        <!-- Inverter -->
-        <div class="inverter-section">
-          <img src="assest/img/cabinet.png" alt="cabinet" />
-        </div>
-
-        <!-- Status Text -->
-        <div class="status-section">
-          <div class="value">Trạm trung truyển</div>
-        </div>
-
-        <!-- Grid -->
-        <div class="grid-section">
-          <img src="assest/img/home.png" alt="homePower" />
-          <div class="value">219.9Vac</div>
-          <div class="label">50.18Hz</div>
-          <div class="value">0W</div>
-        </div>
-
-        <!-- Consumption -->
-        <div class="consumption-section">
-          <img src="assest/img/iphone.png" alt="" />
-          <div class="value">1273W</div>
-          <div class="label">Tiêu thụ</div>
-        </div>
-
-        <!-- Timestamp -->
-        <div class="clock-container">
-          <div class="clock" id="clock"></div>
-        </div>
-
-        <!-- Connection Lines -->
-        <div class="connection-lines">
-          <!-- Left side connection -->
-          <div class="line line-horizontal line-arrow line-left"></div>
-          <!-- Right side connection -->
-          <div class="line line-horizontal line-dashed line-right line-arrow"></div>
-          <!-- Status line -->
-          <div class="line line-vertical line-status line-arrow-vertical"></div>
-          <!-- Đường line -->
-          <div class="line line-horizontal line-pv-to-status line-arrow"></div>
-          <!-- Đường line dọc xuống Trạm trung tuyên -->
-          <div class="line line-vertical line-pv-to-status-vertical line-arrow-vertical-bottom"></div>
+  <!-- Sơ đồ năng lượng -->
+  <section class="energy-diagram">
+    <!-- Icons và hình ảnh sẽ được chèn tại đây -->
+    <div class="container">
+      <!-- Solar Panel -->
+      <div class="solar-section">
+        <img src="assest/img/stationTrans.png" alt="stationTrans" />
+        <div>
+          <div class="value">7202W</div>
+          <div class="label">Công suất PV</div>
         </div>
       </div>
-    </section>
 
-    <!-- Thông tin bổ sung -->
-    <section class="additional-info">
-      <button class="quick-charge">Start Quick Charge</button>
-      <div class="info-block">
-        <span>6kW Power rating</span>
+      <!-- Battery -->
+      <div class="battery-section">
+        <img src="assest/img/weatherStation.png" alt="weatherStation" />
+        <div class="value">5733W</div>
+        <div class="label">Công suất sạc</div>
+        <div class="value">55.2Vdc</div>
+        <div class="label">87% Dung lượng ắc quy</div>
       </div>
-      <div class="info-block">
-        <span>Firmware version: cbaa-181B18</span>
+
+      <!-- Status -->
+      <div class="status">
+        <div class="status-dot"></div>
+        <span>Normal</span>
       </div>
-      <div class="info-block">
-        <span>Batt Parallel Num: 0</span>
+
+      <!-- Inverter -->
+      <div class="inverter-section">
+        <img src="assest/img/cabinet.png" alt="cabinet" />
       </div>
-      <div class="info-block"><span> Batt Capacity: 100Ah </span></div>
-    </section>
+
+      <!-- Status Text -->
+      <div class="status-section">
+        <div class="value">Trạm trung truyển</div>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid-section">
+        <img src="assest/img/home.png" alt="homePower" />
+        <div class="value">219.9Vac</div>
+        <div class="label">50.18Hz</div>
+        <div class="value">0W</div>
+      </div>
+
+      <!-- Consumption -->
+      <div class="consumption-section">
+        <img src="assest/img/iphone.png" alt="" />
+        <div class="value">1273W</div>
+        <div class="label">Tiêu thụ</div>
+      </div>
+
+      <!-- Timestamp -->
+      <div class="clock-container">
+        <div class="clock" id="clock"></div>
+      </div>
+
+      <!-- Connection Lines -->
+      <div class="connection-lines">
+        <!-- Left side connection -->
+        <div class="line line-horizontal line-arrow line-left"></div>
+        <!-- Right side connection -->
+        <div class="line line-horizontal line-dashed line-right line-arrow"></div>
+        <!-- Status line -->
+        <div class="line line-vertical line-status line-arrow-vertical"></div>
+        <!-- Đường line -->
+        <div class="line line-horizontal line-pv-to-status line-arrow"></div>
+        <!-- Đường line dọc xuống Trạm trung tuyên -->
+        <div class="line line-vertical line-pv-to-status-vertical line-arrow-vertical-bottom"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thông tin bổ sung -->
+  <section class="additional-info">
+    <button class="quick-charge">Start Quick Charge</button>
+    <div class="info-block">
+      <span>6kW Power rating</span>
+    </div>
+    <div class="info-block">
+      <span>Firmware version: cbaa-181B18</span>
+    </div>
+    <div class="info-block">
+      <span>Batt Parallel Num: 0</span>
+    </div>
+    <div class="info-block"><span> Batt Capacity: 100Ah </span></div>
+  </section>
   </div>
 
   <script src="https://www.unpkg.com/@eohjsc/era-widget@1.1.3/src/index.js"></script>
