@@ -27,7 +27,8 @@
           <h3>Dòng Điện</h3>
         </div>
         <div class="energy-content">
-          <div class="current">Sản lượng hôm nay <span id="currentId">--</span> </div>
+          <div class="current">Sản lượng hôm nay <h3 id="currentId">--</h3>
+          </div>
           <h3>A</h3>
         </div>
         <div class="energy-icon">
@@ -40,8 +41,10 @@
           <h3>Điện Áp</h3>
         </div>
         <div class="energy-content">
-          <p class="voltageId">Xả hôm nay</p>
-          <h3>2 kWh</h3>
+          <p class="voltage">Xả hôm nay
+          <h3 id="voltageId">--</h3>
+          </p>
+          <h3> kWh</h3>
         </div>
         <div class="energy-icon">
           <img src="assest/img/powerloss.png" alt="Discharge Icon" />
@@ -170,7 +173,7 @@
   <script src="https://www.unpkg.com/@eohjsc/era-widget@1.1.3/src/index.js"></script>
 
   <script>
-    const current = document.getElementById('currentId'); // ID chuỗi cho dòng điện
+    const current = document.getElementById("currentId"); // ID chuỗi cho dòng điện
     const voltage = document.getElementById("voltageId"); // ID chuỗi cho điện áp
     const pw = document.getElementById("Power"); // ID số cho công suất tiêu thụ
 
